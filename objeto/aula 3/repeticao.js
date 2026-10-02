@@ -15,5 +15,9 @@ cliente.endereco = [
 ];
 
 for (let chave in cliente){
-    console.log(cliente[chave]);
+    let  tipo = typeof cliente[chave];
+    if (tipo !== "object" && tipo !== "function"){
+        console.log('A chave ${chave} tem o valor ${cliente[chave]}') ;
+    }
+
 }
